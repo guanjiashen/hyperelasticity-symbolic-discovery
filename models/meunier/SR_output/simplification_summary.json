@@ -1,0 +1,82 @@
+{
+  "original_expression": "(I1 - 7.7472787)*(0.002588358*I1**2 - 0.0067918804*I2 + 0.20516601) + 0.987840292981756",
+  "simplified_expression": "(I1 - 7.7472787)*(0.002588358*I1**2 - 0.0067918804*I2 + 0.20516601) + 0.987840292981756",
+  "changed": false,
+  "criterion": "selection_score",
+  "rmse_tolerance": 0.02,
+  "criterion_limit": 0.039478718324489945,
+  "energy_weight": 0.0,
+  "stress_weight": 1.0,
+  "original_metrics": {
+    "energy_rmse": 0.007825687796908613,
+    "stress_rmse": 0.019232726890714667,
+    "selection_score": 0.03870462580832348
+  },
+  "final_metrics": {
+    "energy_rmse": 0.007825687796908613,
+    "stress_rmse": 0.019232726890714667,
+    "selection_score": 0.03870462580832348
+  },
+  "removed_terms": [],
+  "term_contributions": [
+    {
+      "term": "0.20516601*I1",
+      "coefficient": 0.20516601,
+      "energy_rms": 0.3540667858814597,
+      "stress_rms": 0.5308773587247342,
+      "normalized_energy_contribution": 1.0968346019726822,
+      "normalized_stress_contribution": 1.0683565381189912
+    },
+    {
+      "term": "0.002588358*I1**3",
+      "coefficient": 0.002588358,
+      "energy_rms": 0.29162470764695014,
+      "stress_rms": 0.5906049339539813,
+      "normalized_energy_contribution": 0.903400383464468,
+      "normalized_stress_contribution": 1.1885544415583924
+    },
+    {
+      "term": "0.0526185903558675*I2",
+      "coefficient": 0.05261859035586748,
+      "energy_rms": 0.170163892138761,
+      "stress_rms": 0.23391322069780013,
+      "normalized_energy_contribution": 0.5271368350450905,
+      "normalized_stress_contribution": 0.47073531123135093
+    },
+    {
+      "term": "-0.0200527308013746*I1**2",
+      "coefficient": -0.020052730801374596,
+      "energy_rms": 0.311101912765183,
+      "stress_rms": 0.539788908300115,
+      "normalized_energy_contribution": 0.9637372277414955,
+      "normalized_stress_contribution": 1.0862904584438287
+    },
+    {
+      "term": "-0.0067918804*I1*I2",
+      "coefficient": -0.0067918804,
+      "energy_rms": 0.17758623893136408,
+      "stress_rms": 0.304699916641509,
+      "normalized_energy_contribution": 0.5501299174651219,
+      "normalized_stress_contribution": 0.6131889837800706
+    }
+  ],
+  "pareto": [
+    {
+      "term_count": 5,
+      "expression": "(I1 - 7.7472787)*(0.002588358*I1**2 - 0.0067918804*I2 + 0.20516601) + 0.987840292981756",
+      "energy_rmse": 0.007825687796908613,
+      "stress_rmse": 0.019232726890714667,
+      "selection_score": 0.03870462580832348,
+      "accepted": true
+    },
+    {
+      "term_count": 4,
+      "expression": "0.000824854543714*I1**3 - 0.00277463106092*I1*I2 + 0.124392184663*I1 + 0.0269494542044*I2 - 0.451324309733378",
+      "removed_term": "-0.0200527308013746*I1**2",
+      "energy_rmse": 0.010483269134304495,
+      "stress_rmse": 0.024777168752647755,
+      "selection_score": 0.04986245843400948,
+      "accepted": false
+    }
+  ]
+}

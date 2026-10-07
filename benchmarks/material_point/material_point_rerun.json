@@ -1,0 +1,88 @@
+{
+  "case": "Meunier, main-text Figure 4",
+  "cpu": "x86_64",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "dtype": "float64",
+  "threads": 1,
+  "invariant_bounds": {
+    "I1": [
+      3.0015687942504883,
+      7.674161434173584
+    ],
+    "I2": [
+      3.0015687942504883,
+      14.984977722167969
+    ]
+  },
+  "torch_version": "2.11.0+cu130",
+  "numpy_version": "2.4.4",
+  "nn": {
+    "hidden_neurons": 8,
+    "activation": "softplus",
+    "parameters": 33
+  },
+  "sr": {
+    "dW_dI1": "0.007765074*I1**2 - 0.0401054616027492*I1 - 0.0067918804*I2 + 0.20516601",
+    "dW_dI2": "0.0526185903558675 - 0.0067918804*I1"
+  },
+  "batch_size": 1000000,
+  "pointwise_calls": 20000,
+  "seconds_per_evaluation": {
+    "nn_autograd_batch": 1.346715479157865e-07,
+    "nn_numpy_batch": 1.0101711098104715e-07,
+    "sr_numpy_batch": 4.36342298053205e-09,
+    "nn_autograd_pointwise": 3.840770995011553e-05,
+    "nn_scalar_pointwise": 9.699824964627623e-07,
+    "sr_scalar_pointwise": 8.620284497737885e-08
+  },
+  "nanoseconds_per_evaluation": {
+    "nn_autograd_batch": 134.6715479157865,
+    "nn_numpy_batch": 101.01711098104715,
+    "sr_numpy_batch": 4.36342298053205,
+    "nn_autograd_pointwise": 38407.70995011553,
+    "nn_scalar_pointwise": 969.9824964627624,
+    "sr_scalar_pointwise": 86.20284497737885
+  },
+  "speedup": {
+    "batch_numpy_nn_over_sr": 23.15088668500566,
+    "batch_autograd_nn_over_sr": 30.863738976633762,
+    "pointwise_scalar_nn_over_sr": 11.252325798728602,
+    "pointwise_autograd_nn_over_sr": 445.55037551480336
+  },
+  "element_evaluations": {
+    "coarse": 5087818514,
+    "fine": 17394145026
+  },
+  "projected_seconds_pointwise_scalar": {
+    "coarse_nn": 4935.094903759182,
+    "coarse_sr": 438.58443063538,
+    "fine_nn": 16872.01621615482,
+    "fine_sr": 1499.4247871903233
+  },
+  "maximum_absolute_derivative_error_all_samples": 1.555118700480307e-08,
+  "preactivation_range": [
+    -11.604294765793686,
+    50.40339304742989
+  ],
+  "original_network_source": "/mnt/c/Users/14278/Desktop/\u4e2a\u4eba\u8d44\u6599/work/Hyperelasticity-SR-new/release/hyperelasticity-symbolic-discovery/src/nn_invariant/solver/network_invariant.py",
+  "blas_pools": [
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "filepath": "/home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/.venv/lib/python3.12/site-packages/torch/lib/libgomp.so.1",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/.venv/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so",
+      "version": "0.3.31.188.0",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ]
+}

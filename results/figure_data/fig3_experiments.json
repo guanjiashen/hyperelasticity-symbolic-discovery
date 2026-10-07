@@ -1,0 +1,93 @@
+{
+ "treloar": {
+  "run": "/home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/output/experimental_tuned/Treloar_1944/SR_output_simple_16",
+  "raw_expression": "(-0.658692232026443*I1 + (I1**2 + I2)*(4.4198347e-9*I1**4 + 0.1646727))/I1",
+  "final_expression": "4.22720303025e-9*I1**5 + 0.168860300112*I1 - 0.689062831427909 + 0.182480903882*I2/I1",
+  "criterion": "selection_score",
+  "tolerance": 0.02,
+  "pareto": [
+   {
+    "term_count": 4,
+    "expression": "(-0.658692232026443*I1 + (I1**2 + I2)*(4.4198347e-9*I1**4 + 0.1646727))/I1",
+    "removed_term": null,
+    "stress_rmse": 0.068232190516041,
+    "selection_score": 0.03195126449113847,
+    "accepted": true
+   },
+   {
+    "term_count": 3,
+    "expression": "4.22720303025e-9*I1**5 + 0.168860300112*I1 - 0.689062831427909 + 0.182480903882*I2/I1",
+    "removed_term": "4.4198347e-9*I1**3*I2",
+    "stress_rmse": 0.0637057916536711,
+    "selection_score": 0.029831675978001567,
+    "accepted": true
+   },
+   {
+    "term_count": 2,
+    "expression": "4.00556328721e-9*I1**5 + 0.178452794563*I1 - 0.535359357042116",
+    "removed_term": "0.1646727*I2/I1",
+    "stress_rmse": 0.13027510745131626,
+    "selection_score": 0.061004261819938496,
+    "accepted": false
+   }
+  ]
+ },
+ "yohsuke": {
+  "run": "/home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/output/experimental_tuned/Yohsuke_2011/SR_output_simple_12",
+  "raw_expression": "-20.0454938422784 + (0.041056108*I1**2 + 4.312995*I1 + 0.041056108*I2)**2/I1**2",
+  "final_expression": "0.00107000483731*I1**2 + 0.361326319648*I1 + 0.00730114075446*I2 - 1.4258440870152 + 0.310331662272*I2/I1",
+  "criterion": "selection_score",
+  "tolerance": 0.02,
+  "pareto": [
+   {
+    "term_count": 5,
+    "expression": "-20.0454938422784 + (0.041056108*I1**2 + 4.312995*I1 + 0.041056108*I2)**2/I1**2",
+    "removed_term": null,
+    "stress_rmse": 0.03915757071503174,
+    "selection_score": 0.020148816954446064,
+    "accepted": true
+   },
+   {
+    "term_count": 4,
+    "expression": "0.00107000483731*I1**2 + 0.361326319648*I1 + 0.00730114075446*I2 - 1.4258440870152 + 0.310331662272*I2/I1",
+    "removed_term": "0.00168560400410766*I2**2/I1**2",
+    "stress_rmse": 0.029245085050834438,
+    "selection_score": 0.015048274311875744,
+    "accepted": true
+   },
+   {
+    "term_count": 3,
+    "expression": "0.380734521513*I1 + 0.0108337467907*I2 - 1.43095190087475 + 0.256247095962*I2/I1",
+    "removed_term": "0.00168560400410766*I1**2",
+    "stress_rmse": 0.0445213649222388,
+    "selection_score": 0.022908796843107693,
+    "accepted": false
+   }
+  ]
+ },
+ "brain": {
+  "run": "/home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/output/SR_output-brainCX",
+  "raw_expression": "(I1 - 1.636408)*(1.1462871*I1*I2 - 19.059301) + 11.9214990958232",
+  "final_expression": "(I1 - 1.636408)*(1.1462871*I1*I2 - 19.059301) + 11.9214990958232",
+  "criterion": "selection_score",
+  "tolerance": 0.02,
+  "pareto": [
+   {
+    "term_count": 3,
+    "expression": "(I1 - 1.636408)*(1.1462871*I1*I2 - 19.059301) + 11.9214990958232",
+    "removed_term": null,
+    "stress_rmse": 0.018854155641453523,
+    "selection_score": 0.05531987111701758,
+    "accepted": true
+   },
+   {
+    "term_count": 2,
+    "expression": "0.564241343809*I1**2*I2 - 14.4601379266*I1 + 28.1458974969113",
+    "removed_term": "-1.8757933807368*I1*I2",
+    "stress_rmse": 0.02691745383734215,
+    "selection_score": 0.07897834861435574,
+    "accepted": false
+   }
+  ]
+ }
+}

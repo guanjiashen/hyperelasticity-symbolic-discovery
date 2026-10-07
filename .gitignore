@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+*.so
+*.dll
+*.rst
+*.out
+*.log
+*.aux
+*.synctex.gz
+# JSON configurations, model packages and scientific result metadata are tracked.

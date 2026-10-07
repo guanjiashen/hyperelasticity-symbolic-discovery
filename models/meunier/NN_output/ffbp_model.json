@@ -1,0 +1,7 @@
+{
+  "hidden_neurons": 8,
+  "hidden_layers": [
+    8
+  ],
+  "activation": "softplus"
+}

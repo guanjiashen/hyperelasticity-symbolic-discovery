@@ -1,0 +1,7 @@
+numpy
+torch
+scikit-learn
+sympy
+matplotlib
+pysr
+threadpoolctl

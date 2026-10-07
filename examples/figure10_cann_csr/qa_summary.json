@@ -1,0 +1,68 @@
+{
+  "target_force_N": 20.0,
+  "selected_animation_index": 54,
+  "selected_animation_time_s": 0.1325,
+  "history_sample_time_s": 0.1325001,
+  "moving_grip_reaction_N": 19.97583201880221,
+  "uniform_top_displacement_mm": 54.385225956333834,
+  "reaction_source": "local slope d(EXTERNAL WORK)/d(grip displacement)",
+  "force_range_N": [
+    0.03876034234890339,
+    24.29621685568804
+  ],
+  "internal_energy": 554.8374,
+  "kinetic_energy": 0.2279387,
+  "kinetic_internal_energy_ratio_percent": 0.04108207197279779,
+  "vtk_points": 2590,
+  "vtk_cells": 3040,
+  "front_surface_triangles": 1481,
+  "maximum_nodal_displacement_mm": 54.3852,
+  "maximum_principal_stretch_min": 1.0166276900670317,
+  "maximum_principal_stretch_max": 2.6046766385428834,
+  "top_vertical_displacement_min_mm": 54.3852,
+  "top_vertical_displacement_max_mm": 54.3852,
+  "top_vertical_displacement_spread_mm": 0.0,
+  "colormap": "jet",
+  "stretch_color_limits": [
+    1.0,
+    2.6046510537551715
+  ],
+  "reference_outline": "gray dash-dot",
+  "path_reference_coordinates_mm": {
+    "start": [
+      0.0,
+      -22.95
+    ],
+    "end": [
+      -61.85217481410201,
+      -24.391155673168576
+    ],
+    "slope_dy_dx": 0.023300000000000005,
+    "source": "digitized from Fig. 10(a) of Zhan et al. (2023)",
+    "position_range": [
+      0.0,
+      61.868961999604785
+    ]
+  },
+  "path_material_segments_mm": [
+    [
+      0.0,
+      4.0012263217206
+    ],
+    [
+      23.957342601302095,
+      37.861604069281185
+    ],
+    [
+      57.01747508451856,
+      61.868961999604785
+    ]
+  ],
+  "path_maximum_principal_stretch_min": 1.121344959115961,
+  "path_maximum_principal_stretch_max": 2.4236610536883476,
+  "path_maximum_principal_stretch_s_mm": 57.01747508451856,
+  "path_sampling_spacing_mm": 0.05001532902150751,
+  "path_projection": "area-weighted element-to-node projection and barycentric interpolation",
+  "experimental_path_points": 29,
+  "experimental_path_source": "digitized from Fig. 11 of Zhan et al. (2023)"
+}

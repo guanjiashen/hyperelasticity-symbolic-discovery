@@ -1,0 +1,16 @@
+{
+  "target_force_N": 20.0,
+  "selected_animation_index": 54,
+  "selected_animation_time_s": 0.1325,
+  "history_sample_time_s": 0.1325001,
+  "moving_grip_reaction_N": 19.97583201880221,
+  "uniform_top_displacement_mm": 54.385225956333834,
+  "reaction_source": "local slope d(EXTERNAL WORK)/d(grip displacement)",
+  "force_range_N": [
+    0.03876034234890339,
+    24.29621685568804
+  ],
+  "internal_energy": 554.8374,
+  "kinetic_energy": 0.2279387,
+  "kinetic_internal_energy_ratio_percent": 0.04108207197279779
+}

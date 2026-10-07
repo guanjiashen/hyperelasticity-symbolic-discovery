@@ -1,0 +1,80 @@
+{
+ "mooney_rivlin": {
+  "original_rmse": 0.00023099278528055249,
+  "limit_rmse": 0.00023561264098616354,
+  "tolerance": 0.02,
+  "stress_scale": 0.9136827838697017,
+  "terms": [
+   {
+    "basis": "I1",
+    "coefficient": 0.17999133,
+    "deletion_rmse": 0.5051089859223912,
+    "removed": false
+   },
+   {
+    "basis": "I2",
+    "coefficient": 0.020017272,
+    "deletion_rmse": 0.2140688395794881,
+    "removed": false
+   }
+  ]
+ },
+ "yeoh": {
+  "original_rmse": 0.002559916362936877,
+  "limit_rmse": 0.0026111146901956145,
+  "tolerance": 0.02,
+  "stress_scale": 1.1276710796885412,
+  "terms": [
+   {
+    "basis": "I1",
+    "coefficient": 0.1789307,
+    "deletion_rmse": 0.27324230882072664,
+    "removed": false
+   },
+   {
+    "basis": "I1**3",
+    "coefficient": 1.9555813586855e-05,
+    "deletion_rmse": 0.07309921069210557,
+    "removed": false
+   },
+   {
+    "basis": "I1**2",
+    "coefficient": -0.001648595,
+    "deletion_rmse": 0.06860336991455808,
+    "removed": false
+   }
+  ]
+ },
+ "arruda_boyce": {
+  "original_rmse": 0.05366184333171235,
+  "limit_rmse": 0.0547350801983466,
+  "tolerance": 0.02,
+  "stress_scale": 5.860325868644625,
+  "terms": [
+   {
+    "basis": "I1",
+    "coefficient": 0.54257566,
+    "deletion_rmse": 2.3271575309446644,
+    "removed": false
+   },
+   {
+    "basis": "I1**3",
+    "coefficient": 6.3673564e-05,
+    "deletion_rmse": 1.047863890738273,
+    "removed": false
+   },
+   {
+    "basis": "I2",
+    "coefficient": 0.00057471957,
+    "deletion_rmse": 0.026417600968536657,
+    "removed": true
+   },
+   {
+    "basis": "I1**2",
+    "coefficient": -0.00048163976382949197,
+    "deletion_rmse": 0.031136377937035886,
+    "removed": true
+   }
+  ]
+ }
+}

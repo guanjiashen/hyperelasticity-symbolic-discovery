@@ -1,0 +1,13 @@
+{
+  "radius_mm": 25.0,
+  "gap_mm": 0.5,
+  "nodes": 6999,
+  "tetrahedra": 33986,
+  "mesh_volume_mm3": 65302.60668853986,
+  "mass_Mg": 7.183286735739385e-05,
+  "impact_speed_mm_s": 5000.0,
+  "initial_kinetic_energy_mJ": 897.910841967423,
+  "stop_time_s": 0.015,
+  "animation_dt_s": 0.00025,
+  "material_package": "meunier_csr.flat"
+}
