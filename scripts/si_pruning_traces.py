@@ -31,7 +31,7 @@ import figstyle as fs  # noqa: E402
 import matplotlib.pyplot as plt  # noqa: E402
 from matplotlib import ticker  # noqa: E402
 
-DATA = ROOT / "figs" / "data"
+DATA = ROOT / "data" / "figure_data"
 OUT = ROOT / "figs" / "si_pruning_traces"
 
 # (json file, key, csv name or None, panel title, unit)

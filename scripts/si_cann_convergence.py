@@ -6,7 +6,7 @@ validation loss per L-BFGS outer iteration. For the Yeoh and Arruda-Boyce
 cases the twelve restarts (init seeds 0-11) are shown as thin grey training
 curves and the selected restart (lowest final training loss) is highlighted.
 
-Input : figs/data/si_cann_convergence.json
+Input : data/figure_data/si_cann_convergence.json
         (written by scripts/si_collect_convergence.py, run inside the
         NN_invariant directory of the pipeline repository)
 Output: figs/si_cann_convergence.pdf (+ .png preview)
@@ -24,7 +24,7 @@ from matplotlib import font_manager
 from matplotlib.lines import Line2D
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "figs" / "data" / "si_cann_convergence.json"
+DATA = ROOT / "data" / "figure_data" / "si_cann_convergence.json"
 OUT = ROOT / "figs" / "si_cann_convergence"
 
 # ------------------------------------------------------------------ style

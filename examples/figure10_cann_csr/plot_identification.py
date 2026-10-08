@@ -94,7 +94,7 @@ def main():
     plt.rcParams.update({"font.size": 11})
     fig, axes = plt.subplots(1, 3, figsize=(13.2, 4.1))
     for ax, mode in zip(axes, MODES):
-        lam_d, p_d = load_data(case / "figure15_data" / mode / "stress_stretch.txt")
+        lam_d, p_d = load_data(case.parents[1] / "data" / "experimental" / "Meunier_2008" / mode / "stress_stretch.txt")
         lam_nn, p_nn = nn[mode]
         lam_f = np.linspace(1.0, lam_d.max(), 200)
         p_sr = nominal_stress(mode, lam_f, dW1, dW2)

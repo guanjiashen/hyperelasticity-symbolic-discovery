@@ -45,7 +45,7 @@ def fit_panel():
     dW2 = make_eval(package["constitutive"]["dW_dI2"])
     fig, ax = plt.subplots(figsize=(3.15, 1.9))
     for mode in MODES:
-        lam_d, p_d = load_data(HERE / "figure15_data" / mode / "stress_stretch.txt")
+        lam_d, p_d = load_data(HERE.parents[1] / "data" / "experimental" / "Meunier_2008" / mode / "stress_stretch.txt")
         lam = np.linspace(1.0, lam_d.max(), 200)
         ax.plot(lam, nominal_stress(mode, lam, dW1, dW2), "-", color=COLORS[mode], lw=1.2,
                 label=f"{mode}, discovered law")

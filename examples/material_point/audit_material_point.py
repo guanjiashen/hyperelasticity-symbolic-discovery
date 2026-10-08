@@ -15,7 +15,7 @@ start = source.index('class FFBPNetworkInvariant')
 end = source.index('torch.set_num_threads', start)
 source = source[:start] + source[end:]
 source = source.replace('N_SCALAR = 1_000_000', 'N_SCALAR = 20_000')
-source = source.replace('(CASE / "evaluation_cost_meunier.json").write_text', '(root / "benchmarks/material_point/material_point_rerun.json").write_text')
+source = source.replace('(CASE / "evaluation_cost_meunier.json").write_text', '(root / "examples/material_point/material_point_rerun.json").write_text')
 env = dict(globals(), __file__=str(case / 'benchmark_evaluation_cost.py'))
 print('BLAS pools before limiting:', threadpool_info(), flush=True)
 with threadpool_limits(limits=1):
@@ -28,9 +28,9 @@ with threadpool_limits(limits=1):
     print('preactivation min/max:', float(z.min()), float(z.max()))
     print('torch threads:', torch.get_num_threads())
     print('BLAS pools during benchmark:', threadpool_info())
-    report = json.loads((root / 'benchmarks/material_point/material_point_rerun.json').read_text())
+    report = json.loads((root / 'examples/material_point/material_point_rerun.json').read_text())
     report['maximum_absolute_derivative_error_all_samples'] = err
     report['preactivation_range'] = [float(z.min()), float(z.max())]
     report['original_network_source'] = str(nn_dir / 'solver/network_invariant.py')
     report['blas_pools'] = threadpool_info()
-    (root / 'benchmarks/material_point/material_point_rerun.json').write_text(json.dumps(report, indent=2))
+    (root / 'examples/material_point/material_point_rerun.json').write_text(json.dumps(report, indent=2))

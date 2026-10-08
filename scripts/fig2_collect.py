@@ -4,7 +4,7 @@ Collect the pipeline outputs used by Fig. 2 (benchmarks) into one JSON file.
 Run from the NN_invariant directory of the pipeline repository, e.g.
 
     cd .../FFNN/hyperelasticity/NN_invariant
-    ../../.venv/bin/python <paper>/scripts/fig2_collect.py <paper>/figs/data/fig2_benchmarks.json
+    ../../.venv/bin/python <paper>/scripts/fig2_collect.py <paper>/data/figure_data/fig2_benchmarks.json
 
 For every benchmark it stores the noisy synthetic data actually used for pruning
 (taken from SR_output/experiment_predictions.csv), the raw and final symbolic

@@ -13,8 +13,8 @@ the human brain cortex of Budday et al.).
   (The pruning traces of the former row 4 moved to the SI; insets collided
    with the data in the gel and brain panels.)
 
-Input : figs/data/fig3_{treloar,yohsuke,brain}_predictions.csv
-        figs/data/fig3_experiments.json   (written by scripts/fig3_collect.py)
+Input : data/figure_data/fig3_{treloar,yohsuke,brain}_predictions.csv
+        data/figure_data/fig3_experiments.json   (written by scripts/fig3_collect.py)
 Output: figs/fig3_experiments.pdf (+ .png preview)
 
     python scripts/fig3_experiments.py
@@ -36,7 +36,7 @@ import figstyle as fs
 from figstyle import INK, INK2, INK3, GRID, PATHS, C_ACCENT as ACCENT, C_REJ, C_BAND
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "figs" / "data"
+DATA = ROOT / "data" / "figure_data"
 OUT = ROOT / "figs" / "fig3_experiments"
 
 # ------------------------------------------------------------------ discovered laws

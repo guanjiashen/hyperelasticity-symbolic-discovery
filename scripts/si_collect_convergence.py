@@ -5,7 +5,7 @@ Run from the NN_invariant directory of the pipeline repository, e.g.
 
     cd .../FFNN/hyperelasticity/NN_invariant
     ../../.venv/bin/python <paper>/scripts/si_collect_convergence.py \
-        <paper>/figs/data/si_cann_convergence.json
+        <paper>/data/figure_data/si_cann_convergence.json
 
 For every benchmark the script re-runs the CANN training of the pipeline
 (main.py) with the published settings and captures the train/validation loss

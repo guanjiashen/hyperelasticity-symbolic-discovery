@@ -26,33 +26,18 @@
   },
   {
     "path": "README.md",
-    "bytes": 2990,
-    "sha256": "cdd03eb2cfc531afe6e676a189717690bcf87c752a367e6e6bf12b534afd0ff5"
+    "bytes": 3389,
+    "sha256": "84d294ed7cc523bfb5a48300a93132f758eb111d26007eebe9b1d7f891ed4751"
   },
   {
     "path": "VERIFICATION.md",
-    "bytes": 1110,
-    "sha256": "3dd32c06af05ed4cc56a197686db581829a7bfc67a8c1f50b3c16ebb828a217c"
-  },
-  {
-    "path": "benchmarks/material_point/audit_material_point.py",
-    "bytes": 1935,
-    "sha256": "2ff5b5c5037ba1a7b0d7e717d721b7fff05e170688a739eed6431ae375a75265"
-  },
-  {
-    "path": "benchmarks/material_point/material_point_audit.json",
-    "bytes": 2835,
-    "sha256": "53dbe7e13f81dd0d6145f95f69a5beb092362aa86328adb68afef44ae9c82a58"
-  },
-  {
-    "path": "benchmarks/material_point/material_point_rerun.json",
-    "bytes": 2901,
-    "sha256": "ea13c5c1fb8632cfe6ecf93aa0c39273e612d55cf895e10a3bdd73cade82cce8"
+    "bytes": 2118,
+    "sha256": "1114b6c34b646c9d538ed620a95e574bd9be062da780737591a1995062282374"
   },
   {
     "path": "data/README.md",
-    "bytes": 1951,
-    "sha256": "35230e5f9b5f024794245c7674892afbf850d869660a75ba68d5d4414669e9b6"
+    "bytes": 1948,
+    "sha256": "bdd2080660ee376e65590de5d3e740b99ca7e65adb4aadd74babe397a9fca32d"
   },
   {
     "path": "data/brain-source.md",
@@ -123,6 +108,41 @@
     "path": "data/experimental/Yohsuke_2011/UT/stress_stretch.txt",
     "bytes": 419,
     "sha256": "1810e56783883edcc61ccf19e99ba9727cbc0353f00caea543ba4fa03185f8ac"
+  },
+  {
+    "path": "data/figure_data/fig2_benchmarks.json",
+    "bytes": 27683,
+    "sha256": "956da05743eebc753c5e2b1b09cad6469873fe4b9f46fa53903b788bb6e76b55"
+  },
+  {
+    "path": "data/figure_data/fig2_prune_ledger.json",
+    "bytes": 1680,
+    "sha256": "c1cf5361083434e305d65ab6f4707d2be58b26591ad08351f794c647426f37c9"
+  },
+  {
+    "path": "data/figure_data/fig3_brain_predictions.csv",
+    "bytes": 9073,
+    "sha256": "67c02c2718a8c2c721514f23a54835e9e7b7c6d4bcfd8ea6942630f975dc298e"
+  },
+  {
+    "path": "data/figure_data/fig3_experiments.json",
+    "bytes": 3459,
+    "sha256": "c7f312a4fc496c66206814263bc095aa620278b3da3bec528df7ff61de48d709"
+  },
+  {
+    "path": "data/figure_data/fig3_treloar_predictions.csv",
+    "bytes": 7549,
+    "sha256": "f4ae7a6f2752de69746f8b4523278f010ca152ab8a3cec6f794a755e6d36809e"
+  },
+  {
+    "path": "data/figure_data/fig3_yohsuke_predictions.csv",
+    "bytes": 8413,
+    "sha256": "12c8dbf4782e7a769a265cd2a7ee97924eeadba807694962277adbc87eecaaa0"
+  },
+  {
+    "path": "data/figure_data/si_cann_convergence.json",
+    "bytes": 218110,
+    "sha256": "cbceaa9b9d6b435c1fa12afbed3288e75058b8ea074d79e6d540399ec80c0982"
   },
   {
     "path": "data/meunier-source.md",
@@ -326,13 +346,13 @@
   },
   {
     "path": "examples/figure10_cann_csr/plot_fig4_panels.py",
-    "bytes": 7599,
-    "sha256": "6de3b885f1ec5a4ea2cce35f7fe13ff4e6227c736ae14ad207e0a0162d3f739b"
+    "bytes": 7635,
+    "sha256": "bf6af114ba91c186fd94d7c0bb83060c2579c5329ae8e30291bb7ae9a8397b99"
   },
   {
     "path": "examples/figure10_cann_csr/plot_identification.py",
-    "bytes": 4575,
-    "sha256": "96678e3687c128de7ae5f17b827a7d7ad0daee6d1625b8a2b9eef19d6ff49fd3"
+    "bytes": 4611,
+    "sha256": "55f004b76880c5965da5eb0ccef232ca688a82d68165a2861dbfc10d6051a859"
   },
   {
     "path": "examples/figure10_cann_csr/plot_simulation_only.py",
@@ -375,154 +395,19 @@
     "sha256": "523fa2fd82e20b852bc14361c4253e2f946abf13104c63f4c3d69e40d670e865"
   },
   {
-    "path": "figures/scripts/extract_meunier_fig12a.py",
-    "bytes": 1806,
-    "sha256": "dfe0f3994ec282ea2d991b6562ae3e05f97c21f63a9a48763757224fcc061fc0"
+    "path": "examples/material_point/audit_material_point.py",
+    "bytes": 1929,
+    "sha256": "aadbc5bbed0c139b634a6598253a3c9a9531925f3de6c05617faba71e2710ebf"
   },
   {
-    "path": "figures/scripts/fig2_benchmarks.py",
-    "bytes": 16397,
-    "sha256": "a955ff51c52804eca840dfa42cdabf65f11efbfd448c1663b0fb1446adfe38b6"
+    "path": "examples/material_point/material_point_audit.json",
+    "bytes": 2835,
+    "sha256": "53dbe7e13f81dd0d6145f95f69a5beb092362aa86328adb68afef44ae9c82a58"
   },
   {
-    "path": "figures/scripts/fig2_benchmarks_design.py",
-    "bytes": 14737,
-    "sha256": "cb06ed3ff4a81bf24b8b48c739fb16b0e7d1869fe37252d615e60356f1c04bac"
-  },
-  {
-    "path": "figures/scripts/fig2_collect.py",
-    "bytes": 2534,
-    "sha256": "dacd7312c4cb8ed25146f48da4f58f89de3d7910003040aa144a98a6b24ed774"
-  },
-  {
-    "path": "figures/scripts/fig3_collect.py",
-    "bytes": 1608,
-    "sha256": "2c0986b091dcec512dae5c77ca55fc594253d466a507ac53397e26b55a54229f"
-  },
-  {
-    "path": "figures/scripts/fig3_experiments.py",
-    "bytes": 14127,
-    "sha256": "04aef771f0cd5d1bff0acbd13a571d838acfa10c0bf3373c3a3aeb7a8338ab57"
-  },
-  {
-    "path": "figures/scripts/figstyle.py",
-    "bytes": 3587,
-    "sha256": "84fe3c424c5775cfcb4b04dbf8bf4eb5bc5844353ad612e7dd5456b35f16a633"
-  },
-  {
-    "path": "figures/scripts/plot_heterogeneous_von_mises.py",
-    "bytes": 2872,
-    "sha256": "9b1ac5c4dac403bc475bdef75bba06a5eaaf0bd248b29fcd8d19ae49df0e0d57"
-  },
-  {
-    "path": "figures/scripts/prepare_github_release.py",
-    "bytes": 3518,
-    "sha256": "17db47433cabad048273936b137d3da0cb0aa412c96b3f195b5203216bc89fa1"
-  },
-  {
-    "path": "figures/scripts/render_heterogeneous_mesh.py",
-    "bytes": 2321,
-    "sha256": "36a8dceb109c32b36fb5e24610dcccbc5bf69be5096ade25920a6a599edffe24"
-  },
-  {
-    "path": "figures/scripts/si_cann_convergence.py",
-    "bytes": 4433,
-    "sha256": "cfaf7a02db64b1a2eb5587fbe813f673ee5d1c3988f2933603a70f65d1432f3c"
-  },
-  {
-    "path": "figures/scripts/si_cann_loss_uniform.py",
-    "bytes": 3270,
-    "sha256": "87b8ffaacff6c119c21bb1c2e0fd6b8b2a93f4098f06deb8943a9b65fb815470"
-  },
-  {
-    "path": "figures/scripts/si_cann_predictions_units.py",
-    "bytes": 986,
-    "sha256": "c84ddc133240d185f4028f9e69cb3e20dd4633897021a3e87cadbca35ae9428a"
-  },
-  {
-    "path": "figures/scripts/si_collect_convergence.py",
-    "bytes": 3569,
-    "sha256": "5aa5a095e900e5f86cd8ffecfe7ea543c8b7ea6b2f8d4d11f3c78bbdff538cc9"
-  },
-  {
-    "path": "figures/scripts/si_pruning_traces.py",
-    "bytes": 5820,
-    "sha256": "5ba6cbf905632437d5947795f78602953f97ec8252dabda296c4f00ae5800fce"
-  },
-  {
-    "path": "figures/scripts/si_s7_panel_a.py",
-    "bytes": 1844,
-    "sha256": "fc68b4fc9fb2aa7a08d7fd60ae6dfa56b55e3c991e395aea30e88acf54686dae"
-  },
-  {
-    "path": "integrations/openradioss/README.md",
-    "bytes": 5472,
-    "sha256": "5f41b94e07a97a570dcaaf2bd3a92b84b448166f6276ebd779061ef15f0b0054"
-  },
-  {
-    "path": "integrations/openradioss/examples/nn_openradioss_config.json",
-    "bytes": 1647,
-    "sha256": "d2e05485afa39ebeaf2134044ca476771ced9db02f7b334a6411c72ea050839f"
-  },
-  {
-    "path": "integrations/openradioss/export_openradioss.py",
-    "bytes": 35046,
-    "sha256": "478ab696147e08163499c8e7dca6888b2f82919881fee00ff0c44cda450a005e"
-  },
-  {
-    "path": "integrations/openradioss/requirements.txt",
-    "bytes": 47,
-    "sha256": "adcdc714a74356210735d110eb9b16ce9fba271d325bbaa60e4cf340d915bc42"
-  },
-  {
-    "path": "integrations/openradioss/userlib/README.md",
-    "bytes": 3379,
-    "sha256": "3c5e45a9064007c62c83b19f2c08a1ad5432ece3f3a7a904cba5463381a9df35"
-  },
-  {
-    "path": "integrations/openradioss/userlib/build.sh",
-    "bytes": 609,
-    "sha256": "52e5f3a6839ecb87ef2fa29a49c983c0a74860d53ff0a157aed86d1f59746e31"
-  },
-  {
-    "path": "integrations/openradioss/userlib/lecmuser01.f90",
-    "bytes": 10709,
-    "sha256": "be0d967acc3e889eaba9c114e95994d622dc0c7a324a38df3baa0af7cc38e339"
-  },
-  {
-    "path": "integrations/openradioss/userlib/luser01.f90",
-    "bytes": 7115,
-    "sha256": "7dfe897ea0456af3f81f70a179c897e131fec20a69705651543b097447d13884"
-  },
-  {
-    "path": "models/meunier/NN_output/ffbp_model.json",
-    "bytes": 86,
-    "sha256": "3456f9afe8225914e85a6416bd2bc09d47080def9d927ebe23ea65bba6f2ff1d"
-  },
-  {
-    "path": "models/meunier/NN_output/ffbp_model.pt",
-    "bytes": 2525,
-    "sha256": "2dc1d445dbe3584b04ea1054b9bab099673baa4440f894b4be004febb5fb29ae"
-  },
-  {
-    "path": "models/meunier/SR_output/experiment_prediction_summary.json",
-    "bytes": 565,
-    "sha256": "c2bb2966a07cb5aa83bc154d024dca20cbbde7e537d05b68cdf7814887a07071"
-  },
-  {
-    "path": "models/meunier/SR_output/experiment_predictions.csv",
-    "bytes": 6374,
-    "sha256": "150636b7687274cb27dc44116124aaa4a8afa005b4a988a34b2f9f12894e3b86"
-  },
-  {
-    "path": "models/meunier/SR_output/material_package.json",
-    "bytes": 1998,
-    "sha256": "61ec24d5b94e7ae93a8d12b20075a501f6b0cd9f5ea58df3bb50e93bfc6a98b4"
-  },
-  {
-    "path": "models/meunier/SR_output/simplification_summary.json",
-    "bytes": 2895,
-    "sha256": "a3bf242df9a66d61cc99ed61f69b2996504879266a7f87cc488082f069541acf"
+    "path": "examples/material_point/material_point_rerun.json",
+    "bytes": 2901,
+    "sha256": "ea13c5c1fb8632cfe6ecf93aa0c39273e612d55cf895e10a3bdd73cade82cce8"
   },
   {
     "path": "requirements.txt",
@@ -530,39 +415,84 @@
     "sha256": "7541083e1601518c15dfa59903b655edc864b462ac350b8f41d48349941a707d"
   },
   {
-    "path": "results/figure_data/fig2_benchmarks.json",
-    "bytes": 27683,
-    "sha256": "956da05743eebc753c5e2b1b09cad6469873fe4b9f46fa53903b788bb6e76b55"
+    "path": "scripts/extract_meunier_fig12a.py",
+    "bytes": 1806,
+    "sha256": "dfe0f3994ec282ea2d991b6562ae3e05f97c21f63a9a48763757224fcc061fc0"
   },
   {
-    "path": "results/figure_data/fig2_prune_ledger.json",
-    "bytes": 1680,
-    "sha256": "c1cf5361083434e305d65ab6f4707d2be58b26591ad08351f794c647426f37c9"
+    "path": "scripts/fig2_benchmarks.py",
+    "bytes": 16425,
+    "sha256": "6ff6260e3fd96c6fee76e38dbdc60de3bd45a6b46e1a4dae9c26a14c4a764d78"
   },
   {
-    "path": "results/figure_data/fig3_brain_predictions.csv",
-    "bytes": 9073,
-    "sha256": "67c02c2718a8c2c721514f23a54835e9e7b7c6d4bcfd8ea6942630f975dc298e"
+    "path": "scripts/fig2_benchmarks_design.py",
+    "bytes": 14737,
+    "sha256": "cb06ed3ff4a81bf24b8b48c739fb16b0e7d1869fe37252d615e60356f1c04bac"
   },
   {
-    "path": "results/figure_data/fig3_experiments.json",
-    "bytes": 3459,
-    "sha256": "c7f312a4fc496c66206814263bc095aa620278b3da3bec528df7ff61de48d709"
+    "path": "scripts/fig2_collect.py",
+    "bytes": 2541,
+    "sha256": "0c996268ac9612a5ace73cf6c8fa289e3bd79c125f550f6b8f576d4c7d4c29b7"
   },
   {
-    "path": "results/figure_data/fig3_treloar_predictions.csv",
-    "bytes": 7549,
-    "sha256": "f4ae7a6f2752de69746f8b4523278f010ca152ab8a3cec6f794a755e6d36809e"
+    "path": "scripts/fig3_collect.py",
+    "bytes": 1622,
+    "sha256": "072990198f10b7d2f7b5101e91cbf92d16b19a07a89537ae4c515accbb801a82"
   },
   {
-    "path": "results/figure_data/fig3_yohsuke_predictions.csv",
-    "bytes": 8413,
-    "sha256": "12c8dbf4782e7a769a265cd2a7ee97924eeadba807694962277adbc87eecaaa0"
+    "path": "scripts/fig3_experiments.py",
+    "bytes": 14148,
+    "sha256": "03c6e50a2867dc35b807563b80401e6f90a1ecd160f6223e81c0f5de80d623fd"
   },
   {
-    "path": "results/figure_data/si_cann_convergence.json",
-    "bytes": 218110,
-    "sha256": "cbceaa9b9d6b435c1fa12afbed3288e75058b8ea074d79e6d540399ec80c0982"
+    "path": "scripts/figstyle.py",
+    "bytes": 3587,
+    "sha256": "84fe3c424c5775cfcb4b04dbf8bf4eb5bc5844353ad612e7dd5456b35f16a633"
+  },
+  {
+    "path": "scripts/plot_heterogeneous_von_mises.py",
+    "bytes": 2872,
+    "sha256": "9b1ac5c4dac403bc475bdef75bba06a5eaaf0bd248b29fcd8d19ae49df0e0d57"
+  },
+  {
+    "path": "scripts/prepare_github_release.py",
+    "bytes": 3513,
+    "sha256": "60df8327a19b971ef4433465d94f80a3757ac52cd9e54e694c1f2511ac4ac66e"
+  },
+  {
+    "path": "scripts/render_heterogeneous_mesh.py",
+    "bytes": 2321,
+    "sha256": "36a8dceb109c32b36fb5e24610dcccbc5bf69be5096ade25920a6a599edffe24"
+  },
+  {
+    "path": "scripts/si_cann_convergence.py",
+    "bytes": 4447,
+    "sha256": "394f4a649e2efc633adfb339f99e70ba1715f46164de4a37f23ff8431a114534"
+  },
+  {
+    "path": "scripts/si_cann_loss_uniform.py",
+    "bytes": 3270,
+    "sha256": "87b8ffaacff6c119c21bb1c2e0fd6b8b2a93f4098f06deb8943a9b65fb815470"
+  },
+  {
+    "path": "scripts/si_cann_predictions_units.py",
+    "bytes": 986,
+    "sha256": "c84ddc133240d185f4028f9e69cb3e20dd4633897021a3e87cadbca35ae9428a"
+  },
+  {
+    "path": "scripts/si_collect_convergence.py",
+    "bytes": 3576,
+    "sha256": "61eda86d164360fbc29f8703bf78d7109e9ceac04d2b479f7f63a3dfca162472"
+  },
+  {
+    "path": "scripts/si_pruning_traces.py",
+    "bytes": 5827,
+    "sha256": "41dc238ab8cd4557cac3eb4f2f944dfca7ec242c88894670be1c0c5eadf43b42"
+  },
+  {
+    "path": "scripts/si_s7_panel_a.py",
+    "bytes": 1844,
+    "sha256": "fc68b4fc9fb2aa7a08d7fd60ae6dfa56b55e3c991e395aea30e88acf54686dae"
   },
   {
     "path": "src/nn_invariant/README.md",
@@ -733,5 +663,45 @@
     "path": "src/nn_invariant/solver/train_validate.py",
     "bytes": 3725,
     "sha256": "5eeeec594e468054440d6dbbb251e3a6523242c37e13d26983b84db48a74aa81"
+  },
+  {
+    "path": "src/openradioss/README.md",
+    "bytes": 5472,
+    "sha256": "5f41b94e07a97a570dcaaf2bd3a92b84b448166f6276ebd779061ef15f0b0054"
+  },
+  {
+    "path": "src/openradioss/examples/nn_openradioss_config.json",
+    "bytes": 1647,
+    "sha256": "d2e05485afa39ebeaf2134044ca476771ced9db02f7b334a6411c72ea050839f"
+  },
+  {
+    "path": "src/openradioss/export_openradioss.py",
+    "bytes": 34999,
+    "sha256": "42a675c261a4175360cb95effe3a03fb5187274365aff2de86c4337dad00124c"
+  },
+  {
+    "path": "src/openradioss/requirements.txt",
+    "bytes": 47,
+    "sha256": "adcdc714a74356210735d110eb9b16ce9fba271d325bbaa60e4cf340d915bc42"
+  },
+  {
+    "path": "src/openradioss/userlib/README.md",
+    "bytes": 3379,
+    "sha256": "3c5e45a9064007c62c83b19f2c08a1ad5432ece3f3a7a904cba5463381a9df35"
+  },
+  {
+    "path": "src/openradioss/userlib/build.sh",
+    "bytes": 609,
+    "sha256": "52e5f3a6839ecb87ef2fa29a49c983c0a74860d53ff0a157aed86d1f59746e31"
+  },
+  {
+    "path": "src/openradioss/userlib/lecmuser01.f90",
+    "bytes": 10709,
+    "sha256": "be0d967acc3e889eaba9c114e95994d622dc0c7a324a38df3baa0af7cc38e339"
+  },
+  {
+    "path": "src/openradioss/userlib/luser01.f90",
+    "bytes": 7115,
+    "sha256": "7dfe897ea0456af3f81f70a179c897e131fec20a69705651543b097447d13884"
   }
 ]

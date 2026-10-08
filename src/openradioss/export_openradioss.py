@@ -51,7 +51,7 @@ def _openradioss_root() -> Path:
 
 
 def _vendor_root() -> Path:
-    return Path(os.environ.get("OPENRADIOSS_ROOT", str(Path(__file__).resolve().parents[2]))) / "src" / "nn_invariant"
+    return Path(__file__).resolve().parents[2] / "src" / "nn_invariant"
 
 
 def _is_material_package(payload: dict) -> bool:

@@ -32,14 +32,14 @@ for name in ('main.py','activation_function.py','run_train.sh','run_symbolic.sh'
 for name in ('cli','preprocess','solver','postprocess','Symbolic_Regression','synthetic_data'):
     tree(NN/name, Path('src/nn_invariant')/name, {'.py','.sh','.md','.jl'})
 for name in ('export_openradioss.py','requirements.txt','README.md'):
-    copy(RAD/'tools/nn_invariant'/name, Path('integrations/openradioss')/name)
-tree(RAD/'tools/nn_invariant/examples','integrations/openradioss/examples',{'.json','.md'})
+    copy(RAD/'tools/nn_invariant'/name, Path('src/openradioss')/name)
+tree(RAD/'tools/nn_invariant/examples','src/openradioss/examples',{'.json','.md'})
 for name in ('lecmuser01.f90','luser01.f90','build.sh','README.md'):
     copy(RAD/'tools/userlib/examples/law291_userlib'/name,
-         Path('integrations/openradioss/userlib')/name)
+         Path('src/openradioss/userlib')/name)
 copy(RAD/'LICENSE.md','LICENSES/OpenRadioss-AGPL-3.0.md')
-tree(ROOT/'scripts','figures/scripts',{'.py'})
-tree(ROOT/'figs/data','results/figure_data',{'.csv','.json'})
+tree(ROOT/'scripts','scripts',{'.py'})
+tree(ROOT/'data/figure_data','data/figure_data',{'.csv','.json'})
 for folder in ('figure10_cann_csr','ball_impact_meunier'):
     source = ROOT/'simulation'/folder
     for path in sorted(source.iterdir()):
@@ -52,9 +52,9 @@ for folder in ('NN_output','SR_output'):
     for name in ('ffbp_model.pt','ffbp_model.json','material_package.json','simplification_summary.json',
                  'experiment_predictions.csv','experiment_prediction_summary.json'):
         path = source/folder/name
-        if path.exists(): copy(path, Path('models/meunier')/folder/name)
+        if path.exists(): copy(path, Path('examples/figure10_cann_csr/nn_cache/output')/folder/name)
 for name in ('audit_material_point.py','material_point_audit.json'):
-    copy(ROOT/'tmp'/name,Path('benchmarks/material_point')/name)
+    copy(ROOT/'tmp'/name,Path('examples/material_point')/name)
 copy(ROOT/'simulation/brain_data/README.md','data/brain-source.md')
 # Local inventory includes source paths for audit; public inventory contains no local paths.
 (DEST/'MANIFEST.json').write_text(json.dumps(

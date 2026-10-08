@@ -2,9 +2,9 @@
 Collect the pipeline outputs used by Fig. 3 (measured materials) into one JSON
 file: raw and final symbolic expressions plus the full pruning trace of every
 material (simplification_summary.json). The measured/predicted stresses are
-kept separately in figs/data/fig3_*_predictions.csv.
+kept separately in data/figure_data/fig3_*_predictions.csv.
 
-    python fig3_collect.py <paper>/figs/data/fig3_experiments.json
+    python fig3_collect.py <paper>/data/figure_data/fig3_experiments.json
 """
 import json
 import sys

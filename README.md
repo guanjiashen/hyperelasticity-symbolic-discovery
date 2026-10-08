@@ -9,13 +9,22 @@ are not yet certified as a fully portable, end-to-end reproducibility release.
 
 ## Contents
 
-- `src/nn_invariant`: neural training, symbolic regression and pruning sources.
-- `integrations/openradioss`: exporter and dynamic USER01 material library.
-- `models/meunier`: trained network and deployed symbolic material package.
-- `examples`: perforated-plate and Meunier ball-impact decks, meshes and results.
-- `benchmarks/material_point`: Intel single-thread audit supporting the SI table.
-- `results/figure_data`, `figures/scripts`: figure inputs and plotting/collection scripts.
-- `MANIFEST.json`: file sizes and SHA256 checksums of curated source assets.
+- `src`: neural training, symbolic regression and pruning in `nn_invariant`,
+  plus the OpenRadioss exporter and USER01 library in `openradioss`.
+- `data`: experimental inputs and provenance, with frozen plotting tables
+  under `figure_data`.
+- `examples`: perforated-plate and Meunier ball-impact inputs, meshes and
+  results, plus the single-thread audit under `material_point`.
+  The canonical Meunier network and symbolic package are stored in
+  `examples/figure10_cann_csr/nn_cache/output`; duplicate model copies have
+  been removed.
+- `scripts`: figure plotting and historical data-collection scripts.
+- `LICENSES`: upstream license notices and their scope.
+- `MANIFEST.json`: file sizes and SHA256 checksums of tracked assets.
+
+Generated plots are written to `figs/` by the plotting scripts. Some
+historical collection and solver scripts still require the original source
+workspace; this directory cleanup does not establish full reproducibility.
 
 ## Quick start (Linux / WSL)
 
@@ -26,21 +35,21 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python src/nn_invariant/main.py --help
-python integrations/openradioss/export_openradioss.py export-openradioss \
-  --config models/meunier/SR_output/material_package.json \
+python src/openradioss/export_openradioss.py export-openradioss \
+  --config examples/figure10_cann_csr/nn_cache/output/SR_output/material_package.json \
   --output /tmp/meunier_material.flat --nu 0.495
 ```
 
 For OpenRadioss, set `OPENRADIOSS_ROOT` to the separately installed source/build
 tree, then build the user library with
-`bash integrations/openradioss/userlib/build.sh`.
+`bash src/openradioss/userlib/build.sh`.
 Set the case launcher's `USERLIB` to the generated library if running the
 historical launch scripts outside the original solver layout.
 
 The scalar/vectorized single-thread CPU benchmark can be rerun with:
 
 ```bash
-python benchmarks/material_point/audit_material_point.py
+python examples/material_point/audit_material_point.py
 ```
 
 It writes `material_point_rerun.json` alongside the original audit results.

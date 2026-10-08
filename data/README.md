@@ -24,7 +24,7 @@ or assign a new data license. Preserve these citations and source terms.
 The local CANN source license is retained in `../LICENSES/CANN-MIT.txt`;
 it is not asserted as a blanket license for every experimental dataset.
 
-`../results/figure_data/` contains the frozen tables used for main-text
+`../data/figure_data/` contains the frozen tables used for main-text
 figures. Their target/prediction columns and synthetic-data records preserve
 the exact values plotted; they should be used when reproducing published
 plots rather than assuming every historical raw input uses the final protocol.

@@ -12,8 +12,8 @@ representable in (I1, I2) polynomials (Mooney-Rivlin, Yeoh) to not representable
            (% of peak stress), with the admissible budget (1+tau)E_P^(0) as a
            dashed line; retained terms filled in the chip colour, pruned grey
 
-Input : figs/data/fig2_benchmarks.json   (written by scripts/fig2_collect.py)
-        figs/data/fig2_prune_ledger.json (written by scripts/fig2_prune_collect.py
+Input : data/figure_data/fig2_benchmarks.json   (written by scripts/fig2_collect.py)
+        data/figure_data/fig2_prune_ledger.json (written by scripts/fig2_prune_collect.py
         against the pipeline runs; values verified against the recorded trace)
 Output: figs/fig2_benchmarks.pdf (+ .png preview)
 
@@ -36,8 +36,8 @@ import figstyle as fs
 from figstyle import INK, INK2, INK3, GRID, PATHS, C_REC, C_CMP, C_PRUNED, fnum
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "figs" / "data" / "fig2_benchmarks.json"
-PRUNE = ROOT / "figs" / "data" / "fig2_prune_ledger.json"
+DATA = ROOT / "data" / "figure_data" / "fig2_benchmarks.json"
+PRUNE = ROOT / "data" / "figure_data" / "fig2_prune_ledger.json"
 OUT = ROOT / "figs" / "fig2_benchmarks"
 
 # ------------------------------------------------------------------ kinematics
