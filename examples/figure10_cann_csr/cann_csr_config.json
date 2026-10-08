@@ -14,9 +14,9 @@
     "Zygote"
   ],
   "datasets": {
-    "UT": "figure15_data/UT/stress_stretch.txt",
-    "PS": "figure15_data/PS/stress_stretch.txt",
-    "ET": "figure15_data/ET/stress_stretch.txt"
+    "UT": "../../data/experimental/Meunier_2008/UT/stress_stretch.txt",
+    "PS": "../../data/experimental/Meunier_2008/PS/stress_stretch.txt",
+    "ET": "../../data/experimental/Meunier_2008/ET/stress_stretch.txt"
   },
   "train": {
     "train_mode": "stress",

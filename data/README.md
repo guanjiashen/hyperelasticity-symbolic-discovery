@@ -7,7 +7,11 @@ mode-specific conventions before use. Stress-free reference anchors can be
 inserted by the loader and should not be counted as measured points.
 
 - `Treloar_1944`: digitized vulcanized-rubber curves, Treloar (1944), MPa.
-- `Meunier_2008`: digitized silicone-rubber curves, Meunier et al. (2008), MPa.
+- `Meunier_2008`: the silicone-rubber tensile data used for the main-text
+  identification panel (currently Figure 4A), from Meunier et al. (2008)
+  as reproduced by Zhan et al. (2023), MPa. The files contain 16 UT, 16 PS,
+  and 12 ET measurements; three zero-stress reference anchors are added by
+  the loader, giving 47 samples. See `meunier-source.md`.
 - `Yohsuke_2011`: digitized polymer-gel curves, Bitoh et al. (2011), kPa.
 - `Budday_2017_brain_CX`: cortex tension/compression and shear, Budday et al.
   (2017), as distributed with Linka et al. (2023) in LivingMatterLab/CANN, kPa.

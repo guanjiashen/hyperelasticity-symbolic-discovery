@@ -51,8 +51,8 @@
   },
   {
     "path": "data/README.md",
-    "bytes": 1675,
-    "sha256": "b03ba89581dc0f5f4d55e2304960954655ff7fcd95ba85612de1636a00ba17f0"
+    "bytes": 1951,
+    "sha256": "35230e5f9b5f024794245c7674892afbf850d869660a75ba68d5d4414669e9b6"
   },
   {
     "path": "data/brain-source.md",
@@ -81,18 +81,18 @@
   },
   {
     "path": "data/experimental/Meunier_2008/ET/stress_stretch.txt",
-    "bytes": 272,
-    "sha256": "5eea004311445f6031134f3bbe6f8e074d885dc59c5d36b049626b41132b3ff3"
+    "bytes": 168,
+    "sha256": "74703baf9a191d42a805e95bb1384b35fa241218dff04c06105667dafc83ef31"
   },
   {
     "path": "data/experimental/Meunier_2008/PS/stress_stretch.txt",
-    "bytes": 377,
-    "sha256": "4e0082d36ab033fa0446a805f37eafba30733e9afd3eda6d3b0df51ee110c2f8"
+    "bytes": 224,
+    "sha256": "d926b72184a28a074744a8646380df447e596d39d1a657c3037a164f84415c71"
   },
   {
     "path": "data/experimental/Meunier_2008/UT/stress_stretch.txt",
-    "bytes": 671,
-    "sha256": "ee3a86af38a304e72036d0875b5d77c1933d5c5f1f3c46fb9852ae7d5228b74c"
+    "bytes": 224,
+    "sha256": "311b0328a1aa963814604bc67405ee6b0b9f7e73f11236cc1c5f6239add8a507"
   },
   {
     "path": "data/experimental/Treloar_1944/ET/stress_stretch.txt",
@@ -123,6 +123,11 @@
     "path": "data/experimental/Yohsuke_2011/UT/stress_stretch.txt",
     "bytes": 419,
     "sha256": "1810e56783883edcc61ccf19e99ba9727cbc0353f00caea543ba4fa03185f8ac"
+  },
+  {
+    "path": "data/meunier-source.md",
+    "bytes": 1631,
+    "sha256": "29a1d8462c5784b6043f87ccca18b126a1ff85b7558a9caec0de9e4b988a7835"
   },
   {
     "path": "examples/ball_impact_meunier/BALL_FINE.msh",
@@ -256,8 +261,8 @@
   },
   {
     "path": "examples/figure10_cann_csr/cann_csr_config.json",
-    "bytes": 1786,
-    "sha256": "e6febff3b9cd022abba949c7a69a3a59b01c87f480992a4eedcd3959447c227f"
+    "bytes": 1855,
+    "sha256": "e8f28032836a9010632dca82232123fd7bdd1fd1f7432c0e1d49619fbfe73fa7"
   },
   {
     "path": "examples/figure10_cann_csr/compare_meshes.py",
