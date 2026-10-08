@@ -1,9 +1,12 @@
-# 许可证适用范围
+# Licensing scope
 
-OpenRadioss 上游的 AGPLv3 许可证保留在 `OpenRadioss-AGPL-3.0.md` 中。
-本地 CANN 上游的 MIT 许可声明保留在 `CANN-MIT.txt` 中。
-这些声明分别适用于对应的上游组件，不会为本仓库所有文件重新赋予许可证。
+The OpenRadioss upstream AGPLv3 license is preserved in
+`OpenRadioss-AGPL-3.0.md`. The local CANN upstream MIT notice is preserved in
+`CANN-MIT.txt`. These notices apply to their respective upstream components;
+they do not relicense every file in this repository.
 
-在检查的源码快照中，未找到作者自有模型发现实现的明确许可证。
-本次初始上传没有赋予新的许可证。文件公开可访问，但公开可访问本身不等于获得不受限制的开源使用许可。
-作者自有代码的许可证和确切的数据使用条款将在权属及来源审查后补充。
+No explicit license for the author's discovery implementation was found in
+the inspected source snapshot. No new license is assigned by this initial
+upload. The files are publicly accessible, but public accessibility alone is
+not an unrestricted open-source license. A license for author-owned code and
+precise data terms will be added after ownership/provenance review.

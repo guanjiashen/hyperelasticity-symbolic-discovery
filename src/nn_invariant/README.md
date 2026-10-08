@@ -1,47 +1,46 @@
-# NN_invariant 使用说明
+# NN_invariant user guide
 
-本目录用于训练基于不变量的超弹性神经网络模型，支持：
+This directory trains invariant-based hyperelastic neural networks using:
 
-- 实验数据训练（UT/PS/ET）
-- 可选双轴数据（BS 或 BL）
-- 可选解析模型合成数据（Ogden、Arruda-Boyce 或 Mooney-Rivlin）
+- Experimental UT/PS/ET data.
+- Optional biaxial data (BS or BL).
+- Optional synthetic data from Ogden, Arruda–Boyce, or Mooney–Rivlin models.
 
-## 1. 运行方式
+The commands and defaults below retain paths from the original development environment. Adapt these paths to your installation; see the repository-level README for the release layout and portability status.
 
-在仓库根目录或当前目录执行均可。推荐使用项目虚拟环境 Python：
+## 1. Running the program
 
-/home/guanjs/NN-constitutive/FFNN/.venv/bin/python /home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/main.py [命令行参数]
+The program can be run from the repository root or this directory. The original project virtual environment was used as follows:
 
-最简单运行（默认 Treloar UT/PS/ET，stress 模式）：
+```bash
+/home/guanjs/NN-constitutive/FFNN/.venv/bin/python /home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/main.py [CLI_ARGUMENTS]
+```
 
+The simplest invocation uses Treloar UT/PS/ET data and stress-mode training:
+
+```bash
 /home/guanjs/NN-constitutive/FFNN/.venv/bin/python /home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/main.py
+```
 
-默认输出目录：
+Default output directories:
 
-- `output/NN_output`：神经网络训练结果，如 `ffbp_model.pt`、`ffbp_weights.txt`、应力预测图、能量等高线图、loss 曲线
-- `output/SR_output`：符号回归结果，如导出的能量 CSV、PySR 拟合结果、能量对比等高线图
+- `output/NN_output`: trained network outputs, including `ffbp_model.pt`, `ffbp_weights.txt`, stress predictions, energy contours, and loss curves.
+- `output/SR_output`: symbolic-regression outputs, including exported energy CSV files, PySR fits, and energy-comparison contours.
 
-## 2. 命令行参数
+## 2. Command-line arguments
 
-参数定义位置：cli/cli.py
+Arguments are defined in `cli/cli.py`.
 
-### 训练目标
+### Training objective
 
-- --train-mode {energy,stress}
-  - 训练目标类型
-  - 默认：stress
+`--train-mode {energy,stress}` selects the training target. Default: `stress`.
 
-### 神经网络结构
+### Network architecture
 
-- `--hidden-neurons N`
-  - 单隐藏层宽度，默认：3
-  - 保留用于兼容原有训练命令和模型
+- `--hidden-neurons N`: single-hidden-layer width; default `3`. Retained for compatibility with earlier training commands and models.
+- `--hidden-layers N1 N2 ...`: one or more hidden-layer widths; overrides `--hidden-neurons`. For example, `--hidden-layers 16 16 8` gives `2 → 16 → 16 → 8 → 1`.
 
-- `--hidden-layers N1 N2 ...`
-  - 指定一个或多个隐藏层的宽度，并覆盖 `--hidden-neurons`
-  - 例如 `--hidden-layers 16 16 8` 表示网络结构 `2 → 16 → 16 → 8 → 1`
-
-多层网络训练示例：
+Example with multiple hidden layers:
 
 ```bash
 /home/guanjs/NN-constitutive/FFNN/.venv/bin/python \
@@ -50,112 +49,65 @@
   --activation softplus
 ```
 
-### 合成数据相关
+### Synthetic data
 
-- --use-synthetic-data
-  - 启用后，不使用实验数据路径，而是按解析模型自动生成数据
-  - 默认：关闭（不传该参数）
+| Argument | Meaning | Default |
+| --- | --- | --- |
+| `--use-synthetic-data` | Generate data from an analytical model instead of reading experimental paths | Disabled unless supplied |
+| `--synthetic-model {ogden,arruda_boyce,mooney_rivlin}` | Analytical model | `ogden` |
+| `--mooney-rivlin-c10 C10` | Mooney–Rivlin C10 when that model is selected | `0.18` |
+| `--mooney-rivlin-c01 C01` | Mooney–Rivlin C01 when that model is selected | `0.02` |
+| `--synthetic-point-count N` | Number of samples per loading mode | `30` |
+| `--synthetic-noise-std STD` | Standard deviation of Gaussian noise added to synthetic stresses | `0.0` |
+| `--synthetic-ut-range MIN MAX` | UT stretch interval | `1.0 3.0` |
+| `--synthetic-ps-range MIN MAX` | PS stretch interval | `1.0 3.0` |
+| `--synthetic-et-range MIN MAX` | ET stretch interval | `1.0 3.0` |
 
-- --synthetic-model {ogden,arruda_boyce,mooney_rivlin}
-  - 合成数据使用的解析模型
-  - 默认：ogden
+### Experimental data paths (UT/PS/ET)
 
-- --mooney-rivlin-c10 C10
-  - 当 `--synthetic-model mooney_rivlin` 时使用的 Mooney-Rivlin `C10`
-  - 默认：0.18
+Use `--ut-dataset PATH`, `--ps-dataset PATH`, and `--et-dataset PATH`. Their historical defaults are:
 
-- --mooney-rivlin-c01 C01
-  - 当 `--synthetic-model mooney_rivlin` 时使用的 Mooney-Rivlin `C01`
-  - 默认：0.02
+- `fitting-data-PK/Treloar_1944/UT/stress_stretch.txt`
+- `fitting-data-PK/Treloar_1944/PS/stress_stretch.txt`
+- `fitting-data-PK/Treloar_1944/ET/stress_stretch.txt`
 
-- --synthetic-point-count N
-  - 每个模式采样点数量
-  - 默认：30
+### Biaxial data
 
-- --synthetic-noise-std STD
-  - 施加到合成应力数据上的高斯噪声标准差
-  - 默认：0.0
+- `--enable-biaxial`: enable biaxial data loading; disabled unless supplied.
+- `--biaxial-prefix {BS,BL}`: loading-mode prefix; default `BS`. BS usually corresponds to `BT_small`, and BL to `BT_large`.
+- `--biaxial-base-dir PATH`: root directory containing `B1`, `B2`, etc., each with `stress_stretch.txt`. Default: `fitting-data-PK/Kawabata_1981/BT_small`.
 
-- --synthetic-ut-range MIN MAX
-  - UT 拉伸范围
-  - 默认：1.0 3.0
+The number of biaxial datasets is not fixed: the loader scans all matching `B*` subdirectories.
 
-- --synthetic-ps-range MIN MAX
-  - PS 拉伸范围
-  - 默认：1.0 3.0
+## 3. Example commands
 
-- --synthetic-et-range MIN MAX
-  - ET 拉伸范围
-  - 默认：1.0 3.0
+### Example 0: training followed by symbolic regression
 
-### 实验数据路径（UT/PS/ET）
-
-- --ut-dataset 路径
-- --ps-dataset 路径
-- --et-dataset 路径
-
-默认分别指向：
-
-- fitting-data-PK/Treloar_1944/UT/stress_stretch.txt
-- fitting-data-PK/Treloar_1944/PS/stress_stretch.txt
-- fitting-data-PK/Treloar_1944/ET/stress_stretch.txt
-
-### 双轴数据相关
-
-- --enable-biaxial
-  - 启用双轴数据读取
-  - 默认：关闭（不传该参数）
-
-- --biaxial-prefix {BS,BL}
-  - 双轴模式前缀
-  - BS 通常对应 BT_small
-  - BL 通常对应 BT_large
-  - 默认：BS
-
-- --biaxial-base-dir 路径
-  - 双轴数据根目录，目录下应包含 B1、B2... 子目录，每个子目录内有 stress_stretch.txt
-  - 默认：fitting-data-PK/Kawabata_1981/BT_small
-
-说明：双轴数据数量不是写死的，程序会自动扫描你给的目录中所有满足条件的 B* 子目录。
-
-## 3. 示例命令
-
-### 示例 0：依次执行训练和符号回归
-
-训练和符号回归现在由两个独立脚本负责。默认使用合成数据工作流，依次运行：
+Training and symbolic regression are handled by separate scripts. The default script workflow uses synthetic data:
 
 ```bash
 bash /home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/run_train.sh
 bash /home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/run_symbolic.sh
 ```
 
-默认行为等价于：
+The defaults correspond to `main.py --train-mode stress --use-synthetic-data --synthetic-model mooney_rivlin` for training, and `nn_to_symbolic.py pipeline` for symbolic regression.
+`run_train.sh` generates Mooney–Rivlin UT/PS/ET data and trains NN_invariant. `run_symbolic.sh` performs symbolic regression on the saved network and runs the FEM element test by default. Both scripts must select the same workflow.
 
-- 训练：`main.py --train-mode stress --use-synthetic-data --synthetic-model mooney_rivlin`
-- 符号回归：`nn_to_symbolic.py pipeline`
-
-`run_train.sh` 默认先用 Mooney-Rivlin 模型生成 `UT/PS/ET` 数据并训练 `NN_invariant`。训练完成后，`run_symbolic.sh` 对保存的网络做符号回归，并默认执行 FEM 单元测试。两个脚本必须选择相同的工作流。
-
-如果想切回实验数据工作流，可以显式传入：
+Switch to experimental data explicitly:
 
 ```bash
 bash /home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/run_train.sh --experimental
 bash /home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/run_symbolic.sh --experimental
 ```
 
-也可以显式指定：
+Available script switches:
 
-- `--synthetic`：使用当前默认的合成数据工作流
-- `--experimental`：使用 Treloar `UT/PS/ET` 实验数据工作流
-- `--run-fem`：执行末尾 FEM 单元测试（仅适用于 `run_symbolic.sh`，也是默认行为）
-- `--skip-fem`：跳过末尾 FEM 单元测试（仅适用于 `run_symbolic.sh`）
+- `--synthetic`: select the default synthetic workflow.
+- `--experimental`: select the Treloar UT/PS/ET experimental workflow.
+- `--run-fem`: run the final FEM element test (`run_symbolic.sh` only; default).
+- `--skip-fem`: skip that test (`run_symbolic.sh` only).
 
-如果你想改训练参数或符号回归参数，分别编辑 [run_train.sh](/home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/run_train.sh) 和 [run_symbolic.sh](/home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/run_symbolic.sh) 中的参数数组：
-
-- `train_args=(...)`
-- `symbolic_args=(...)`
-
-例如可以把它们改成：
+Edit `train_args=(...)` in `run_train.sh` and `symbolic_args=(...)` in `run_symbolic.sh` to change the respective settings. For example:
 
 ```bash
 train_args=(
@@ -171,40 +123,48 @@ symbolic_args=(
 )
 ```
 
-### 示例 A：只用默认实验数据训练（stress）
+### Example A: default experimental stress training
 
+```bash
 /home/guanjs/NN-constitutive/FFNN/.venv/bin/python /home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/main.py --train-mode stress
+```
 
-### 示例 B：启用双轴小变形数据（BT_small -> BS）
+### Example B: small-deformation biaxial data (BT_small → BS)
 
+```bash
 /home/guanjs/NN-constitutive/FFNN/.venv/bin/python /home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/main.py --train-mode stress --enable-biaxial --biaxial-prefix BS --biaxial-base-dir /home/guanjs/NN-constitutive/FFNN/fitting-data-PK/Kawabata_1981/BT_small
+```
 
-### 示例 C：启用双轴大变形数据（BT_large -> BL）
+### Example C: large-deformation biaxial data (BT_large → BL)
 
+```bash
 /home/guanjs/NN-constitutive/FFNN/.venv/bin/python /home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/main.py --train-mode stress --enable-biaxial --biaxial-prefix BL --biaxial-base-dir /home/guanjs/NN-constitutive/FFNN/fitting-data-PK/Kawabata_1981/BT_large
+```
 
-### 示例 D：使用合成数据（Ogden）
+### Example D: synthetic Ogden data
 
+```bash
 /home/guanjs/NN-constitutive/FFNN/.venv/bin/python /home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/main.py --train-mode stress --use-synthetic-data --synthetic-model ogden --synthetic-point-count 40 --synthetic-ut-range 1.0 2.5 --synthetic-ps-range 1.0 2.5 --synthetic-et-range 1.0 2.5
+```
 
-### 示例 E：使用合成数据（Mooney-Rivlin）
+### Example E: synthetic Mooney–Rivlin data
 
+```bash
 /home/guanjs/NN-constitutive/FFNN/.venv/bin/python /home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/main.py --train-mode stress --use-synthetic-data --synthetic-model mooney_rivlin --mooney-rivlin-c10 0.18 --mooney-rivlin-c01 0.02 --synthetic-point-count 40 --synthetic-ut-range 1.0 3.0 --synthetic-ps-range 1.0 3.0 --synthetic-et-range 1.0 3.0
+```
 
-如果想在解析模型生成的数据中加入可控噪声，例如标准差为 `0.02` 的高斯噪声，可以追加：
+To add controlled Gaussian noise with standard deviation `0.02`:
 
 ```bash
 /home/guanjs/NN-constitutive/FFNN/.venv/bin/python /home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/main.py --train-mode stress --use-synthetic-data --synthetic-model mooney_rivlin --mooney-rivlin-c10 0.18 --mooney-rivlin-c01 0.02 --synthetic-point-count 40 --synthetic-noise-std 0.02 --synthetic-ut-range 1.0 3.0 --synthetic-ps-range 1.0 3.0 --synthetic-et-range 1.0 3.0
 ```
 
-## 4. 常见问题
+## 4. Troubleshooting
 
-1. 报错找不到数据文件
+If a data file cannot be found, check `--ut-dataset`, `--ps-dataset`, and `--et-dataset`. For biaxial data, verify that `--biaxial-base-dir` contains `B*` subdirectories with `stress_stretch.txt` in each.
 
-- 检查 --ut-dataset / --ps-dataset / --et-dataset 路径是否存在。
-- 启用双轴时，检查 --biaxial-base-dir 下是否有 B* 子目录且每个目录内有 stress_stretch.txt。
+To inspect available options, run:
 
-1. 想确认参数是否生效
-
-- 可先执行：
-  /home/guanjs/NN-constitutive/FFNN/.venv/bin/python /home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/main.py --help
+```bash
+/home/guanjs/NN-constitutive/FFNN/.venv/bin/python /home/guanjs/NN-constitutive/FFNN/hyperelasticity/NN_invariant/main.py --help
+```
